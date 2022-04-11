@@ -7,5 +7,5 @@ CREATE TABLE github_users (
     username TEXT NOT NULL,
     email TEXT,
     avatar TEXT,
-    cohortName TEXT NOT NULL
+    cohort_name TEXT NOT NULL
 );

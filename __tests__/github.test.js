@@ -24,11 +24,14 @@ describe('yearbook app routes', () => {
   });
 
   it.only('should login and redirect to yearbook', async () => {
-    const res = await request
+    const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
       .redirects(1);
-    expect(res.req.path).toEqual('/api/v1/yearbook');
+    // expect(res.req.path).toEqual('/api/v1/yearbook');
+    expect(req.redirects[0]).toEqual(
+      expect.stringContaining('/api/v1/yearbook')
+    );
   });
 
   it('logs a user out through a delete route', async () => {
