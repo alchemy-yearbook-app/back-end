@@ -15,7 +15,7 @@ describe('yearbook app routes', () => {
     pool.end();
   });
 
-  it.only('redirects to the github oauth page upon login', async () => {
+  it('redirects to the github oauth page upon login', async () => {
     const req = await request(app).get('/api/v1/github/login');
 
     expect(req.header.location).toMatch(
@@ -23,12 +23,12 @@ describe('yearbook app routes', () => {
     );
   });
 
-  it('should login and redirect to posts', async () => {
+  it.only('should login and redirect to yearbook', async () => {
     const res = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
       .redirects(1);
-    expect(res.req.path).toEqual('/api/v1/posts');
+    expect(res.req.path).toEqual('/api/v1/yearbook');
   });
 
   it('logs a user out through a delete route', async () => {
