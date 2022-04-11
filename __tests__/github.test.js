@@ -15,7 +15,7 @@ describe('yearbook app routes', () => {
     pool.end();
   });
 
-  it('redirects to the github oauth page upon login', async () => {
+  it.only('redirects to the github oauth page upon login', async () => {
     const req = await request(app).get('/api/v1/github/login');
 
     expect(req.header.location).toMatch(
