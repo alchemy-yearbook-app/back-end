@@ -23,14 +23,16 @@ describe('yearbook app routes', () => {
     );
   });
 
-  it.only('should login and redirect to yearbook', async () => {
+  it.only('should login and redirect to profile', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
       .redirects(1);
-    // expect(res.req.path).toEqual('/api/v1/yearbook');
+
+    console.log('req.body', req.body);
+    // expect(res.req.path).toEqual('/api/v1/profile');
     expect(req.redirects[0]).toEqual(
-      expect.stringContaining('/api/v1/yearbook')
+      expect.stringContaining('/api/v1/profile')
     );
   });
 

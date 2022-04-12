@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS user_permissions CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    email TEXT,
+    email TEXT
 );
 
 CREATE TABLE profile (
@@ -23,13 +23,14 @@ CREATE TABLE profile (
 );
 
 CREATE TABLE cohort (
-    id BIGINT REFERENCES github_users(uuid),
+    user_id BIGINT REFERENCES github_users(uuid),
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL
 );
 
 CREATE TABLE memorybook (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    cohort_name TEXT REFERENCES cohort(name),
+    cohort_id BIGINT REFERENCES cohort(id),
     image TEXT,
     audio TEXT
 );
