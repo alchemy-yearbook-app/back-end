@@ -42,7 +42,7 @@ describe('yearbook app routes', () => {
       .get('/api/v1/github/login/callback?code=42')
       .redirects(1);
 
-    const res = await request(app).get('/api/v1/github/user');
+    const res = await agent.get('/api/v1/github/me');
 
     expect(res.body).toEqual({
       uuid: expect.any(String),
