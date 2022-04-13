@@ -23,7 +23,7 @@ describe('yearbook app routes', () => {
     );
   });
 
-  it.only('should login and redirect to profile', async () => {
+  it('should login and redirect to profile', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
@@ -36,7 +36,7 @@ describe('yearbook app routes', () => {
     );
   });
 
-  it('logs a user out through a delete route', async () => {
+  it.skip('logs a user out through a delete route', async () => {
     await GithubUser.createUser({
       username: 'fake_github_user',
       avatar_url: 'https://www.placecage.com/gif/300/300',
