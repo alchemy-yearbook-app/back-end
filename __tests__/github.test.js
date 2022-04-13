@@ -23,14 +23,12 @@ describe('yearbook app routes', () => {
     );
   });
 
-  it.only('should login and redirect to profile', async () => {
+  it('should login and redirect to profile', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
       .redirects(1);
 
-    console.log('req.body', req.body);
-    // expect(res.req.path).toEqual('/api/v1/profile');
     expect(req.redirects[0]).toEqual(
       expect.stringContaining('/api/v1/profile')
     );
@@ -46,5 +44,23 @@ describe('yearbook app routes', () => {
     const res = await request(app).delete('/api/v1/github/sessions');
 
     expect(res.body.message).toEqual('Signed out successfully');
+  });
+
+  it.only('lists teams in the organization an authenticated user is part of', async () => {
+    const req = await request
+      .agent(app)
+      .get('/api/v1/github/login/callback?code=42')
+      .redirects(1);
+
+    expect(req.redirects[0]).toEqual(
+      expect.stringContaining('/api/v1/profile')
+    );
+
+    const req2 = await request
+      .agent(app)
+      .get('https://api.github.com/orgs/alchemycodelab/teams');
+    console.log('req2.body.message', req2.body.message);
+
+    expect(req2);
   });
 });
