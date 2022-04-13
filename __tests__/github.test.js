@@ -15,7 +15,7 @@ describe('yearbook app routes', () => {
     pool.end();
   });
 
-  it.skip('lists teams in the organization an authenticated user is part of', async () => {
+  it('lists teams in the organization an authenticated user is part of', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
@@ -29,7 +29,5 @@ describe('yearbook app routes', () => {
       .agent(app)
       .get('https://api.github.com/orgs/alchemycodelab/teams');
     console.log('req2.body.message', req2.body.message);
-
-    expect(req2);
   });
 });
