@@ -23,6 +23,7 @@ describe('yearbook app routes', () => {
     );
   });
 
+  // after log in, redirects to profile
   it('should login and redirect to profile', async () => {
     const req = await request
       .agent(app)
@@ -33,6 +34,21 @@ describe('yearbook app routes', () => {
       expect.stringContaining('/api/v1/profile')
     );
   });
+
+  // after log in, hits a user endpoint that ensures successful log in
+  // it('sets and retrieves as currently signed in user', async () => {
+  //   await request
+  //     .agent(app)
+  //     .get('/api/v1/github/login/callback?code=42')
+  //     .redirects(1);
+
+  //   const res = await agent.get('/api/v1/github/me');
+
+  //   expect(res.body).toEqual({
+  //     uuid: expect.any(String),
+  //     email: 'not-real@example.com',
+  //   });
+  // });
 
   it.skip('logs a user out through a delete route', async () => {
     await GithubUser.createUser({

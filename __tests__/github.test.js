@@ -15,7 +15,7 @@ describe('yearbook app routes', () => {
     pool.end();
   });
 
-  it.only('lists teams in the organization an authenticated user is part of', async () => {
+  it.skip('lists teams in the organization an authenticated user is part of', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
