@@ -15,7 +15,7 @@ describe('yearbook app routes', () => {
     pool.end();
   });
 
-  it('lists teams in the organization an authenticated user is part of', async () => {
+  it.skip('lists teams in the organization an authenticated user is part of', async () => {
     const req2 = await request.agent(app).get('/orgs/alchemycodelab/teams');
     expect(req2.body).toEqual({
       name: 'september-2021',

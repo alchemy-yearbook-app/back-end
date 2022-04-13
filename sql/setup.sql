@@ -32,10 +32,10 @@ CREATE TABLE cohort (
 CREATE TABLE memorybook (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     cohort_id BIGINT REFERENCES cohort(id),
-    image TEXT,
+    image_url TEXT,
     audio TEXT,
     text TEXT,
-    first_name TEXT NOT NULL
+    first_name TEXT REFERENCES profile(first_name)
 );
 
 CREATE TABLE user_permissions (
