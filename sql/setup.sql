@@ -23,19 +23,20 @@ CREATE TABLE profile (
     github VARCHAR,
     quote TEXT NOT NULL,
     company TEXT
-    -- cohort name
 );
 
 CREATE TABLE cohort (
     user_id BIGINT REFERENCES github_users(uuid),
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    cohort_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    -- cohort_id will be from gitHub teams generated ID
+    gH_team_id BIGINT NOT NULL,
+    -- name is populated from gH teams/students/teams + slug
     name TEXT NOT NULL
-    -- member_id
 );
 
 CREATE TABLE memorybook (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    cohort_id BIGINT REFERENCES cohort(id),
+    cohort_id BIGINT REFERENCES cohort(cohort_id),
     image_url TEXT,
     audio TEXT,
     text TEXT,
