@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const Profile = require('../lib/models/Profile');
 
 jest.mock('../lib/utils/github');
 
@@ -52,7 +53,7 @@ describe('yearbook app routes', () => {
 
     await agent.get('/login/callback');
 
-    const profile = await agent.post('/api/v1/profile').send({
+    const profile = await Profile.createProfile({
       avatar: 'Blue Person',
       firstName: 'Bing Bong',
       lastName: 'Ding Dong',
