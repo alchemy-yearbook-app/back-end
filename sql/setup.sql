@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS profile CASCADE;
 DROP TABLE IF EXISTS cohort CASCADE;
 DROP TABLE IF EXISTS memorybook CASCADE;
 DROP TABLE IF EXISTS user_permissions CASCADE;
+DROP TABLE IF EXISTS cloudinary CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -31,11 +32,18 @@ CREATE TABLE cohort (
 CREATE TABLE memorybook (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     cohort_id BIGINT REFERENCES cohort(id),
-    image TEXT,
-    audio TEXT
+    image_url TEXT,
+    audio TEXT,
+    text TEXT,
+    first_name TEXT
 );
 
 CREATE TABLE user_permissions (
     user_id BIGINT REFERENCES github_users(uuid),
     memory_id BIGINT REFERENCES memorybook(id)
+);
+
+CREATE TABLE cloudinary (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    image_url TEXT NOT NULL
 );
