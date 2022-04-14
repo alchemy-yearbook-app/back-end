@@ -45,6 +45,28 @@ describe('yearbook app routes', () => {
     });
   });
 
+  it.only('gets a profile', async () => {
+    const agent = request.agent(app);
+
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    await agent.get('/login/callback');
+
+    const profile = await agent.post('/api/v1/profile').send({
+      avatar: 'Blue Person',
+      firstName: 'Bing Bong',
+      lastName: 'Ding Dong',
+      linkedIn: 'yeetin',
+      github: 'gitin',
+      quote: 'Shablooey',
+      company: 'quan',
+    });
+
+    const res = await agent.get(`/api/v1/profile/${profile.id}`);
+
+    expect(res.body).toEqual(profile);
+  });
+
   it('updates a profile', async () => {
     const agent = request.agent(app);
 
