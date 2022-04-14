@@ -46,7 +46,7 @@ describe('yearbook app routes', () => {
     });
   });
 
-  it.only('gets a profile', async () => {
+  it('gets a profile', async () => {
     const agent = request.agent(app);
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
@@ -75,7 +75,7 @@ describe('yearbook app routes', () => {
 
     await agent.get('/login/callback');
 
-    const profile = await agent.post('/api/v1/profile').send({
+    const profile = await Profile.createProfile({
       avatar: 'Blue Person',
       firstName: 'Bing Bong',
       lastName: 'Ding Dong',
@@ -87,7 +87,7 @@ describe('yearbook app routes', () => {
 
     const res = await agent.patch(`/api/v1/profile/${profile.id}`).send({
       avatar: 'Airbender',
-      firstName: 'Bing Bong',
+      firstName: 'David Ortiz',
       lastName: 'Dh',
       linkedIn: 'yeetin',
       github: 'gitin',
