@@ -13,7 +13,8 @@ CREATE TABLE github_users (
 );
 
 CREATE TABLE profile (
-    id BIGINT REFERENCES github_users(uuid),
+    user_id BIGINT REFERENCES github_users(uuid),
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
     avatar TEXT,
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,
