@@ -24,7 +24,7 @@ describe('yearbook app routes', () => {
   });
 
   // after log in, redirects to profile
-  it('should login and redirect to profile', async () => {
+  it.skip('should login and redirect to profile', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
