@@ -15,7 +15,7 @@ describe('yearbook app routes', () => {
     pool.end();
   });
 
-  it('creates a profile', async () => {
+  it.skip('creates a profile', async () => {
     const agent = request.agent(app);
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
