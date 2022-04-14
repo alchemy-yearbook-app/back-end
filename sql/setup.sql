@@ -35,7 +35,7 @@ CREATE TABLE memorybook (
     image_url TEXT,
     audio TEXT,
     text TEXT,
-    first_name TEXT REFERENCES profile(first_name)
+    first_name TEXT
 );
 
 CREATE TABLE user_permissions (
