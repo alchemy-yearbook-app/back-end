@@ -36,13 +36,13 @@ describe('yearbook app routes', () => {
   });
 
   // after log in, hits a user endpoint that ensures successful log in
-  // it('sets and retrieves as currently signed in user', async () => {
+  // it.skip('sets and retrieves as currently signed in user', async () => {
   //   await request
   //     .agent(app)
   //     .get('/api/v1/github/login/callback?code=42')
   //     .redirects(1);
 
-  //   const res = await agent.get('/api/v1/github/me');
+  //   const res = await request.agent(app).get('/api/v1/github/me');
 
   //   expect(res.body).toEqual({
   //     uuid: expect.any(String),

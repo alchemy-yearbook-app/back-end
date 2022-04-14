@@ -10,6 +10,8 @@ DROP TABLE IF EXISTS cloudinary CASCADE;
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     email TEXT
+    -- profile
+    -- member_id
 );
 
 CREATE TABLE profile (
@@ -21,12 +23,14 @@ CREATE TABLE profile (
     github VARCHAR,
     quote TEXT NOT NULL,
     company TEXT
+    -- cohort name
 );
 
 CREATE TABLE cohort (
     user_id BIGINT REFERENCES github_users(uuid),
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL
+    -- member_id
 );
 
 CREATE TABLE memorybook (
@@ -35,15 +39,6 @@ CREATE TABLE memorybook (
     image_url TEXT,
     audio TEXT,
     text TEXT,
-    first_name TEXT
-);
-
-CREATE TABLE user_permissions (
-    user_id BIGINT REFERENCES github_users(uuid),
-    memory_id BIGINT REFERENCES memorybook(id)
-);
-
-CREATE TABLE cloudinary (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    image_url TEXT NOT NULL
+    resource_url TEXT
+    -- maybe name
 );
