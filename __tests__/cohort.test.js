@@ -168,7 +168,7 @@ describe('yearbook app routes', () => {
     const res = await agent.get('/api/v1/user/teams');
     // get from cohort github_team_id
     const expected = {
-      github_team_id: 5116318,
+      githubTeamId: 5116318,
       name: 'september-2021',
     };
     expect(res.body).toEqual(expected);
