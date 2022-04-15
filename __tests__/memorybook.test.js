@@ -14,7 +14,30 @@ describe('memorybook routes', () => {
     pool.end();
   });
 
-  it.skip('user can get memorybook', async () => {
+  it.only('creates a memorybook item', async () => {
+    const agent = request.agent(app);
+
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    await agent.get('/login/callback');
+
+    const res = await agent.post('/api/v1/memorybook').send({
+      imageUrl: 'Image-1',
+      audio: 'Some audio',
+      text: 'Some text',
+      resourceUrl: 'Some resource',
+    });
+
+    expect(res.body).toEqual({
+      id: expect.any(String),
+      imageUrl: 'Image-1',
+      audio: 'Some audio',
+      text: 'Some text',
+      resourceUrl: 'Some resource',
+    });
+  });
+
+  it('gets all items in memorybook', async () => {
     const agent = request.agent(app);
     await request(app).get('/api/v1/github/login');
     // call back redirect, exchange access_token
