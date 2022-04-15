@@ -37,7 +37,7 @@ describe('memorybook routes', () => {
     });
   });
 
-  it('gets all items in memorybook', async () => {
+  it.skip('gets all items in memorybook', async () => {
     const agent = request.agent(app);
     await request(app).get('/api/v1/github/login');
     // call back redirect, exchange access_token

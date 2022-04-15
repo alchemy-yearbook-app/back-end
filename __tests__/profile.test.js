@@ -21,7 +21,8 @@ describe('yearbook app routes', () => {
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
-    await agent.get('/login/callback');
+    const login = await agent.get('/login/callback');
+    console.log('login.body', login.body);
 
     const req2 = await agent.post('/api/v1/profile').send({
       avatar: 'Blue Person',
