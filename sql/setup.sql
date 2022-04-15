@@ -28,7 +28,7 @@ CREATE TABLE profile (
 
 CREATE TABLE cohort (
     -- gH_team_id will be from gitHub teams generated ID
-    github_team_id BIGINT NOT NULL,
+    github_team_id BIGINT NOT NULL UNIQUE,
     -- name is populated from gH teams/students/teams + slug
     name TEXT NOT NULL
 );
