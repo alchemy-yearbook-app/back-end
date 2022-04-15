@@ -157,4 +157,20 @@ describe('yearbook app routes', () => {
       },
     ]);
   });
+
+  // after login, get userData teams, user.github_team_id ===
+  // fetch team data, insert github_team_id into cohort table
+  it.only('should return github_team_id of current user', async () => {
+    const agent = request.agent(app);
+
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    const res = await agent.get('/api/v1/user/teams');
+    // get from cohort github_team_id
+    const expected = {
+      githubTeamId: 5116318,
+      name: 'september-2021',
+    };
+    expect(res.body).toEqual(expected);
+  });
 });
