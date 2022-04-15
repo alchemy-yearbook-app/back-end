@@ -82,7 +82,9 @@ describe('yearbook app routes', () => {
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
-    const res = await agent.get('/api/v1/user/teams');
+    await agent.get('/login/callback');
+
+    const res = agent.get('/api/v1/user/teams');
     console.log('res.body', res.body);
 
     expect(res.body).toEqual([
