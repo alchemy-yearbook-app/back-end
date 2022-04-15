@@ -2,7 +2,6 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
-const GithubUser = require('../lib/models/GithubUser');
 
 jest.mock('../lib/utils/github');
 
@@ -24,14 +23,15 @@ describe('yearbook app routes', () => {
   });
 
   // after log in, redirects to profile
-  it('should login and redirect to profile', async () => {
+  it.skip('should login and redirect to profile', async () => {
     const req = await request
       .agent(app)
       .get('/api/v1/github/login/callback?code=42')
       .redirects(1);
+    // redirect to frontend localhost 7890
 
     expect(req.redirects[0]).toEqual(
-      expect.stringContaining('/api/v1/profile')
+      expect.stringContaining('http://localhost:7891/yearbook')
     );
   });
 

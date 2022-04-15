@@ -160,7 +160,7 @@ describe('yearbook app routes', () => {
 
   // after login, get userData teams, user.github_team_id ===
   // fetch team data, insert github_team_id into cohort table
-  it.only('should return github_team_id of current user', async () => {
+  it('should return github_team_id of current user', async () => {
     const agent = request.agent(app);
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
