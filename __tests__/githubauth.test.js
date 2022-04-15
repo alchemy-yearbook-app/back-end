@@ -53,9 +53,7 @@ describe('yearbook app routes', () => {
   it('logs a user out through a delete route', async () => {
     const agent = request.agent(app);
 
-    const req = await agent
-      .get('/api/v1/github/login/callback?code=42')
-      .redirects(1);
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
     const res = await agent.delete('/api/v1/github/sessions');
 

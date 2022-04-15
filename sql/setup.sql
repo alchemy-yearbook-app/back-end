@@ -3,10 +3,8 @@
 DROP TABLE IF EXISTS github_users CASCADE;
 DROP TABLE IF EXISTS profile CASCADE;
 DROP TABLE IF EXISTS cohort CASCADE;
-DROP TABLE IF EXISTS memorybook CASCADE;
-DROP TABLE IF EXISTS user_permissions CASCADE;
-DROP TABLE IF EXISTS cloudinary CASCADE;
 DROP TABLE IF EXISTS cohort_members CASCADE;
+DROP TABLE IF EXISTS memorybook CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -34,6 +32,11 @@ CREATE TABLE cohort (
     -- name is populated from gH teams/students/teams + slug
     name TEXT NOT NULL
 );
+
+INSERT INTO
+    cohort (github_team_id, name)
+VALUES
+    (5116318, 'september-2021');
 
 CREATE TABLE cohort_members (
     user_id BIGINT REFERENCES github_users(uuid),
