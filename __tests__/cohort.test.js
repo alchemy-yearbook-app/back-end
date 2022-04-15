@@ -77,14 +77,13 @@ describe('yearbook app routes', () => {
     });
   });
 
-  it.skip('gets github user data', async () => {
+  it('gets users cohort data', async () => {
     const agent = request.agent(app);
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
-    await agent.get('/login/callback');
-
-    const res = agent.get('/api/v1/user');
+    const res = await agent.get('/api/v1/user/teams');
+    console.log('res.body', res.body);
 
     expect(res.body).toEqual([
       {
