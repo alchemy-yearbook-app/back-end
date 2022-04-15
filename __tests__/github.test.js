@@ -15,7 +15,7 @@ describe('github app routes', () => {
   it('lists teams in the organization an authenticated user is part of', async () => {
     const req = await request
       .agent(app)
-      .get('/orgs/alchemycodelab/teams/students/teams');
+      .get('/api/v1/orgs/alchemycodelab/teams/students/teams');
     expect(req.body).toEqual([
       {
         name: 'spring-2020',
