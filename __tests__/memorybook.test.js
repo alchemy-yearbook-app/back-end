@@ -14,7 +14,7 @@ describe('memorybook routes', () => {
     pool.end();
   });
 
-  it.only('creates a memorybook item', async () => {
+  it('creates a memorybook item', async () => {
     const agent = request.agent(app);
 
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
