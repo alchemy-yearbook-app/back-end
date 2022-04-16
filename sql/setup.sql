@@ -48,3 +48,8 @@ CREATE TABLE memorybook (
     resource_url TEXT
     -- maybe name
 );
+
+
+INSERT INTO github_users (email, username) VALUES ('mike@gmail.com', 'mikemike');
+
+INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id) VALUES ('mike', 'mikemike', 'jordan', 'www.linkedin/mike', 'www.github/mike', 'i love pizza', 'piped piper', '1');
