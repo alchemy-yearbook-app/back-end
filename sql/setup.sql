@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS memorybook CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    email TEXT,
+    email TEXT UNIQUE,
     username TEXT
     -- profile
     -- member_id
