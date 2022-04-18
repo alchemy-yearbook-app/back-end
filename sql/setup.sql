@@ -23,7 +23,8 @@ CREATE TABLE profile (
     linked_in VARCHAR,
     github VARCHAR,
     quote TEXT NOT NULL,
-    company TEXT
+    company TEXT,
+    email TEXT REFERENCES github_users(email)
 );
 
 CREATE TABLE cohort (
@@ -50,6 +51,6 @@ CREATE TABLE memorybook (
 );
 
 
-INSERT INTO github_users (email, username) VALUES ('mike@gmail.com', 'mikemike');
+INSERT INTO github_users (email, username) VALUES ('kevindo0501@gmail.com', 'mikemike');
 
 INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id) VALUES ('mike', 'mikemike', 'jordan', 'www.linkedin/mike', 'www.github/mike', 'i love pizza', 'piped piper', '1');
