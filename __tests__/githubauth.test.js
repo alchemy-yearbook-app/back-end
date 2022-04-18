@@ -31,7 +31,7 @@ describe('yearbook app routes', () => {
     // redirect to frontend localhost 7890
 
     expect(req.redirects[0]).toEqual(
-      expect.stringContaining('http://localhost:7891/yearbook')
+      expect.stringContaining('/api/v1/profile')
     );
   });
 
