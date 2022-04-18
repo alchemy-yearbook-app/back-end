@@ -24,3 +24,4 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           REDIRECT_URI: http://localhost:7890/api/v1/github/login/callback
           YEARBOOK_ACCESS_TOKEN: ${{ secrets.YEARBOOK_ACCESS_TOKEN }}
+          NODE_ENV: test
