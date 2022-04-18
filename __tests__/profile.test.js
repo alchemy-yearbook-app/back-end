@@ -52,19 +52,12 @@ describe('yearbook app routes', () => {
 
     await agent.get('/login/callback');
 
-    const profile = await Profile.createProfile({
-      avatar: 'Blue Person',
-      firstName: 'Bing Bong',
-      lastName: 'Ding Dong',
-      linkedIn: 'yeetin',
-      github: 'gitin',
-      quote: 'Shablooey',
-      company: 'quan',
-    });
+    const profile = await Profile.getProfileById(1);
+    const profileWithEmail = await profile.getEmails();
 
     const res = await agent.get(`/api/v1/profile/${profile.id}`);
 
-    expect(res.body).toEqual(profile);
+    expect(res.body).toEqual(profileWithEmail);
   });
 
   it('updates a profile', async () => {
