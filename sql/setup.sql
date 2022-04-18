@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS memorybook CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    email TEXT,
+    email TEXT UNIQUE,
     username TEXT
     -- profile
     -- member_id
@@ -25,7 +25,6 @@ CREATE TABLE profile (
     quote TEXT NOT NULL,
     company TEXT,
     email TEXT REFERENCES github_users(email)
-
 );
 
 CREATE TABLE cohort (
@@ -54,5 +53,5 @@ CREATE TABLE memorybook (
 
 INSERT INTO github_users (email, username) VALUES ('kevindo0501@gmail.com', 'mikemike');
 
-INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id) 
-VALUES ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1');
+INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
+VALUES ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevindo0501@gmail.com');
