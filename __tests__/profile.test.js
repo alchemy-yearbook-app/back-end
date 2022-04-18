@@ -31,6 +31,7 @@ describe('yearbook app routes', () => {
       github: 'gitin',
       quote: 'Shablooey',
       company: 'quan',
+      email: 'bingbong@gmail.com',
     });
 
     expect(req2.body).toEqual({
@@ -42,6 +43,7 @@ describe('yearbook app routes', () => {
       github: 'gitin',
       quote: 'Shablooey',
       company: 'quan',
+      email: 'bingbong@gmail.com',
     });
   });
 
@@ -53,11 +55,10 @@ describe('yearbook app routes', () => {
     await agent.get('/login/callback');
 
     const profile = await Profile.getProfileById(1);
-    const profileWithEmail = await profile.getEmails();
 
     const res = await agent.get(`/api/v1/profile/${profile.id}`);
 
-    expect(res.body).toEqual(profileWithEmail);
+    expect(res.body).toEqual(profile);
   });
 
   it('updates a profile', async () => {
@@ -75,6 +76,7 @@ describe('yearbook app routes', () => {
       github: 'gitin',
       quote: 'Shablooey',
       company: 'quan',
+      email: 'bingbong@gmail.com',
     });
 
     const res = await agent.patch(`/api/v1/profile/${profile.id}`).send({
@@ -85,6 +87,7 @@ describe('yearbook app routes', () => {
       github: 'gitin',
       quote: 'I like it when they call me big papi',
       company: 'Red Sox',
+      email: 'bingbong@gmail.com',
     });
 
     const expected = {
@@ -95,6 +98,7 @@ describe('yearbook app routes', () => {
       github: 'gitin',
       quote: 'I like it when they call me big papi',
       company: 'Red Sox',
+      email: 'bingbong@gmail.com',
     };
 
     expect(res.body).toEqual({ id: expect.any(String), ...expected });
