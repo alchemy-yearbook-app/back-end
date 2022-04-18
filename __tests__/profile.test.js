@@ -46,7 +46,6 @@ describe('yearbook app routes', () => {
       email: 'bingbong@gmail.com',
     });
   });
-
   it('gets a profile', async () => {
     const agent = request.agent(app);
 
@@ -57,6 +56,20 @@ describe('yearbook app routes', () => {
     const profile = await Profile.getProfileById(1);
 
     const res = await agent.get(`/api/v1/profile/${profile.id}`);
+
+    expect(res.body).toEqual(profile);
+  });
+
+  it('gets all profiles', async () => {
+    const agent = request.agent(app);
+
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    await agent.get('/login/callback');
+
+    const profile = await Profile.getProfiles();
+
+    const res = await agent.get(`/api/v1/profile`);
 
     expect(res.body).toEqual(profile);
   });
