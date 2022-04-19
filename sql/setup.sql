@@ -34,7 +34,7 @@ CREATE TABLE cohort (
     name TEXT NOT NULL
 );
 
-INSERT INTO cohort (github_team_id, name) VALUES (5116318, 'september-2021');
+-- INSERT INTO cohort (github_team_id, name) VALUES (5116318, 'september-2021');
 
 CREATE TABLE cohort_members (
     user_id BIGINT REFERENCES github_users(uuid),
