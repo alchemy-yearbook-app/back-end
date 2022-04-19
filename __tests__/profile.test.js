@@ -69,7 +69,7 @@ describe('yearbook app routes', () => {
 
     const profile = await Profile.getProfiles();
 
-    const res = await agent.get(`/api/v1/profile`);
+    const res = await agent.get('/api/v1/profile');
 
     expect(res.body).toEqual(profile);
   });
