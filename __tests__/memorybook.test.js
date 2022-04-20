@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const Memorybook = require('../lib/models/Memorybook');
 
 jest.mock('../lib/utils/github');
 
@@ -37,25 +38,52 @@ describe('memorybook routes', () => {
     });
   });
 
-  it.skip('gets all items in memorybook', async () => {
+  it('gets all items in memorybook', async () => {
     const agent = request.agent(app);
-    await request(app).get('/api/v1/github/login');
+    await agent.get('/api/v1/github/login');
     // call back redirect, exchange access_token
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
     // posts
-    const post1 = {
-      id: expect.any(String),
+    const post1 = await Memorybook.insert({
       text: 'my first memory!',
-    };
+    });
 
-    const post2 = {
-      id: expect.any(String),
+    const post2 = await Memorybook.insert({
       text: 'my second memory!',
-    };
+    });
 
     const res = await agent.get('/api/v1/memorybook');
 
     expect(res.body).toEqual([post1, post2]);
+  });
+
+  it('gets a memory', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login');
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    const memory = await Memorybook.insert({
+      text: 'my first memory!',
+    });
+
+    const res = await agent.get(`/api/v1/memorybook/${memory.id}`);
+
+    expect(res.body).toEqual(memory);
+  });
+
+  it('deletes a memory', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login');
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    const memory = await Memorybook.insert({
+      id: '1',
+      text: 'my first memory!',
+    });
+
+    const res = await agent.delete(`/api/v1/memorybook/${memory.id}`);
+
+    expect(res.body).toEqual(memory);
   });
 });
