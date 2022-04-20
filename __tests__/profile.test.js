@@ -46,6 +46,7 @@ describe('yearbook app routes', () => {
       email: 'bingbong@gmail.com',
     });
   });
+
   it('gets a profile', async () => {
     const agent = request.agent(app);
 
