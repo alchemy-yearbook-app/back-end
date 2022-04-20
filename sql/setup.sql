@@ -2,15 +2,22 @@
 -- The SQL in this file will be executed when you run `npm run setup-db`
 DROP TABLE IF EXISTS github_users CASCADE;
 DROP TABLE IF EXISTS profile CASCADE;
+DROP TABLE IF EXISTS no_profile CASCADE;
 DROP TABLE IF EXISTS cohort CASCADE;
 DROP TABLE IF EXISTS cohort_members CASCADE;
 DROP TABLE IF EXISTS memorybook CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    github_user_id INT UNIQUE,
     username TEXT
-    -- profile
-    -- member_id
+);
+
+CREATE TABLE no_profile(
+    no_profile_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    login TEXT NOT NULL,
+    avatar_url TEXT NOT NULL,
+    github_user_id INT UNIQUE
 );
 
 CREATE TABLE profile (
@@ -34,7 +41,6 @@ CREATE TABLE cohort (
     name TEXT NOT NULL
 );
 
--- INSERT INTO cohort (github_team_id, name) VALUES (5116318, 'september-2021');
 
 CREATE TABLE cohort_members (
     user_id BIGINT REFERENCES github_users(uuid),
@@ -48,10 +54,9 @@ CREATE TABLE memorybook (
     audio TEXT,
     text TEXT,
     resource_url TEXT
-    -- maybe name
 );
 
-INSERT INTO github_users (username) VALUES ('mikemike');
+INSERT INTO github_users (username, github_user_id) VALUES ('mikemike', 1);
 
 INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
 VALUES ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
