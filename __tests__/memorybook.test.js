@@ -40,7 +40,7 @@ describe('memorybook routes', () => {
 
   it('gets all items in memorybook', async () => {
     const agent = request.agent(app);
-    await request(app).get('/api/v1/github/login');
+    await agent.get('/api/v1/github/login');
     // call back redirect, exchange access_token
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
@@ -58,5 +58,20 @@ describe('memorybook routes', () => {
     const res = await agent.get('/api/v1/memorybook');
 
     expect(res.body).toEqual([post1, post2]);
+  });
+
+  it('gets a memory', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login');
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    const memory = await Memorybook.insert({
+      id: expect.any(String),
+      text: 'my first memory!',
+    });
+
+    const res = await agent.get(`/api/v1/memorybook/${memory.id}`);
+
+    expect(res.body).toEqual(memory);
   });
 });
