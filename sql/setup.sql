@@ -9,14 +9,15 @@ DROP TABLE IF EXISTS memorybook CASCADE;
 
 CREATE TABLE github_users (
     uuid BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    github_user_id INT NOT NULL UNIQUE,
+    github_user_id INT UNIQUE,
     username TEXT
 );
 
 CREATE TABLE no_profile(
     no_profile_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     login TEXT NOT NULL,
-    avatar_url TEXT NOT NULL
+    avatar_url TEXT NOT NULL,
+    github_user_id INT UNIQUE
 );
 
 CREATE TABLE profile (

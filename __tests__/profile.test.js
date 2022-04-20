@@ -32,6 +32,7 @@ describe('yearbook app routes', () => {
       quote: 'Shablooey',
       company: 'quan',
       email: 'bingbong@gmail.com',
+      pronoun: 'they/them',
     });
 
     expect(req2.body).toEqual({
@@ -44,6 +45,7 @@ describe('yearbook app routes', () => {
       quote: 'Shablooey',
       company: 'quan',
       email: 'bingbong@gmail.com',
+      pronoun: 'they/them',
     });
   });
 
@@ -91,6 +93,7 @@ describe('yearbook app routes', () => {
       quote: 'Shablooey',
       company: 'quan',
       email: 'bingbong@gmail.com',
+      pronoun: 'they/them',
     });
 
     const res = await agent.patch(`/api/v1/profile/${profile.id}`).send({
@@ -102,6 +105,7 @@ describe('yearbook app routes', () => {
       quote: 'I like it when they call me big papi',
       company: 'Red Sox',
       email: 'bingbong@gmail.com',
+      pronoun: 'they/them',
     });
 
     const expected = {
@@ -113,6 +117,7 @@ describe('yearbook app routes', () => {
       quote: 'I like it when they call me big papi',
       company: 'Red Sox',
       email: 'bingbong@gmail.com',
+      pronoun: 'they/them',
     };
 
     expect(res.body).toEqual({ id: expect.any(String), ...expected });
