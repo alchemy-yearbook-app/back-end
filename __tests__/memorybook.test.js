@@ -46,12 +46,10 @@ describe('memorybook routes', () => {
 
     // posts
     const post1 = await Memorybook.insert({
-      id: expect.any(String),
       text: 'my first memory!',
     });
 
     const post2 = await Memorybook.insert({
-      id: expect.any(String),
       text: 'my second memory!',
     });
 
@@ -66,11 +64,25 @@ describe('memorybook routes', () => {
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
     const memory = await Memorybook.insert({
-      id: expect.any(String),
       text: 'my first memory!',
     });
 
     const res = await agent.get(`/api/v1/memorybook/${memory.id}`);
+
+    expect(res.body).toEqual(memory);
+  });
+
+  it('deletes a memory', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login');
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+
+    const memory = await Memorybook.insert({
+      id: '1',
+      text: 'my first memory!',
+    });
+
+    const res = await agent.delete(`/api/v1/memorybook/${memory.id}`);
 
     expect(res.body).toEqual(memory);
   });
