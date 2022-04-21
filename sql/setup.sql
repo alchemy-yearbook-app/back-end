@@ -79,3 +79,9 @@ INSERT INTO github_users (username, github_user_id) VALUES ('mikemike', 1);
 
 INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
 VALUES ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
+
+INSERT INTO cohort (github_team_id, name)
+VALUES (5116318, 'september-2021');
+
+INSERT INTO memorybook (cohort_id, image_url, audio, text, resource_url, name)
+VALUES ('5116318', 'https://i.ibb.co/qB7Pw9w/IMG-9759.jpg', '', 'test', '', 'kevin');
