@@ -63,7 +63,8 @@ CREATE TABLE memorybook (
     image_url TEXT,
     audio TEXT,
     text TEXT,
-    resource_url TEXT
+    resource_url TEXT,
+    name TEXT NOT NULL
 );
 
 CREATE TABLE advice (
