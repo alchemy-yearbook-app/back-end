@@ -3,6 +3,7 @@
 DROP TABLE IF EXISTS github_users CASCADE;
 DROP TABLE IF EXISTS profile CASCADE;
 DROP TABLE IF EXISTS no_profile CASCADE;
+DROP TABLE IF EXISTS your_cohort CASCADE;
 DROP TABLE IF EXISTS cohort CASCADE;
 DROP TABLE IF EXISTS cohort_members CASCADE;
 DROP TABLE IF EXISTS memorybook CASCADE;
@@ -16,6 +17,13 @@ CREATE TABLE github_users (
 
 CREATE TABLE no_profile(
     no_profile_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    login TEXT NOT NULL,
+    avatar_url TEXT NOT NULL,
+    github_user_id INT UNIQUE
+);
+
+CREATE TABLE your_cohort(
+    your_cohort_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     login TEXT NOT NULL,
     avatar_url TEXT NOT NULL,
     github_user_id INT UNIQUE
