@@ -2,8 +2,10 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const Advice = require('../lib/models/Advice');
 
 jest.mock('../lib/utils/github');
+const statusCode = 200;
 
 describe('yearbook app routes', () => {
   beforeEach(() => {
@@ -37,21 +39,21 @@ describe('yearbook app routes', () => {
 
   it('gets all pieces of advice', async () => {
     const agent = request.agent(app);
-    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
     await agent.get('/login/callback');
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
 
-    const advice1 = await agent.post('/api/v1/advice/create').send({
+    const advice1 = await Advice.createAdvice({
       title: 'Advice title',
       advice: 'Advice body',
       alumniName: 'Alumni name',
-      cohort: 'Alumin Cohort',
+      cohort: 'Alumni Cohort',
     });
 
-    const advice2 = await agent.post('/api/v1/advice/create').send({
+    const advice2 = await Advice.createAdvice({
       title: 'Advice title 2',
       advice: 'Advice body 2',
       alumniName: 'Alumni name 2',
-      cohort: 'Alumin Cohort 2',
+      cohort: 'Alumni Cohort 2',
     });
 
     const res = await agent.get('/api/v1/advice');
