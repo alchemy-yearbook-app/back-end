@@ -56,6 +56,13 @@ CREATE TABLE memorybook (
     resource_url TEXT
 );
 
+CREATE TABLE alumni_advice (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    title TEXT,
+    advice, TEXT,
+    alumni_name TEXT
+);
+
 INSERT INTO github_users (username, github_user_id) VALUES ('mikemike', 1);
 
 INSERT INTO profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
