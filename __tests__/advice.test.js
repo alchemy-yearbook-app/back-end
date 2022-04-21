@@ -76,4 +76,21 @@ describe('yearbook app routes', () => {
 
     expect(res.body).toEqual(advice);
   });
+
+  it('deletes a piece of advice', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+    await agent.get('/login/callback');
+
+    const advice = await Advice.createAdvice({
+      title: 'Advice title',
+      advice: 'Advice body',
+      alumniName: 'Alumni name',
+      cohort: 'Alumni Cohort',
+    });
+
+    const res = await agent.delete(`/api/v1/advice/${advice.id}`);
+
+    expect(res.body).toEqual(advice);
+  });
 });
