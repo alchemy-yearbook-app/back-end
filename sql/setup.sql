@@ -19,7 +19,8 @@ CREATE TABLE no_profile(
     no_profile_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     login TEXT NOT NULL,
     avatar_url TEXT NOT NULL,
-    github_user_id INT UNIQUE
+    github_user_id INT UNIQUE,
+    html_url TEXT
 );
 
 CREATE TABLE your_cohort(
