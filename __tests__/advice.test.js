@@ -5,7 +5,6 @@ const app = require('../lib/app');
 const Advice = require('../lib/models/Advice');
 
 jest.mock('../lib/utils/github');
-const statusCode = 200;
 
 describe('yearbook app routes', () => {
   beforeEach(() => {
@@ -39,8 +38,8 @@ describe('yearbook app routes', () => {
 
   it('gets all pieces of advice', async () => {
     const agent = request.agent(app);
-    await agent.get('/login/callback');
     await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+    await agent.get('/login/callback');
 
     const advice1 = await Advice.createAdvice({
       title: 'Advice title',
@@ -59,5 +58,22 @@ describe('yearbook app routes', () => {
     const res = await agent.get('/api/v1/advice');
 
     expect(res.body).toEqual([advice1, advice2]);
+  });
+
+  it('gets a piece of advice', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+    await agent.get('/login/callback');
+
+    const advice = await Advice.createAdvice({
+      title: 'Advice title',
+      advice: 'Advice body',
+      alumniName: 'Alumni name',
+      cohort: 'Alumni Cohort',
+    });
+
+    const res = await agent.get(`/api/v1/advice/${advice.id}`);
+
+    expect(res.body).toEqual(advice);
   });
 });
