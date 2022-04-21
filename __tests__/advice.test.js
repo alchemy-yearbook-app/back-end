@@ -13,4 +13,25 @@ describe('yearbook app routes', () => {
   afterAll(() => {
     pool.end();
   });
+
+  it('creates a piece of advice', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+    await agent.get('/login/callback');
+
+    const req = await agent.post('/api/v1/advice/create').send({
+      title: 'Advice title',
+      advice: 'Advice body',
+      alumniName: 'Alumni name',
+      cohort: 'Alumin Cohort',
+    });
+
+    expect(req.body).toEqual({
+      id: expect.any(String),
+      title: 'Advice title',
+      advice: 'Advice body',
+      alumniName: 'Alumni name',
+      cohort: 'Alumin Cohort',
+    });
+  });
 });
