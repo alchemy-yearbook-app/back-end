@@ -27,7 +27,6 @@ describe('memorybook routes', () => {
       audio: 'Some audio',
       text: 'Some text',
       resourceUrl: 'Some resource',
-      name: 'name',
     });
 
     expect(res.body).toEqual({
@@ -36,7 +35,6 @@ describe('memorybook routes', () => {
       audio: 'Some audio',
       text: 'Some text',
       resourceUrl: 'Some resource',
-      name: 'name',
     });
   });
 
@@ -49,28 +47,15 @@ describe('memorybook routes', () => {
     // posts
     const post1 = await Memorybook.insert({
       text: 'my first memory!',
-      name: 'name',
     });
 
     const post2 = await Memorybook.insert({
       text: 'my second memory!',
-      name: 'name',
     });
 
     const res = await agent.get('/api/v1/memorybook');
 
-    expect(res.body).toEqual([
-      {
-        audio: '',
-        id: '1',
-        imageUrl: 'https://i.ibb.co/qB7Pw9w/IMG-9759.jpg',
-        name: 'kevin',
-        resourceUrl: '',
-        text: 'test',
-      },
-      post1,
-      post2,
-    ]);
+    expect(res.body).toEqual([post1, post2]);
   });
 
   it('gets a memory', async () => {
@@ -80,7 +65,6 @@ describe('memorybook routes', () => {
 
     const memory = await Memorybook.insert({
       text: 'my first memory!',
-      name: 'name',
     });
 
     const res = await agent.get(`/api/v1/memorybook/${memory.id}`);
@@ -96,7 +80,6 @@ describe('memorybook routes', () => {
     const memory = await Memorybook.insert({
       id: '1',
       text: 'my first memory!',
-      name: 'name',
     });
 
     const res = await agent.delete(`/api/v1/memorybook/${memory.id}`);
