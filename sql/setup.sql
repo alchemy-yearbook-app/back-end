@@ -81,9 +81,10 @@ INSERT INTO github_users (username, github_user_id) VALUES ('mikemike', 1);
 INSERT INTO 
     profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
 VALUES 
-    ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com'),
 
     ('https://im3.ezgif.com/tmp/ezgif-3-64f69efea3.gif', 'Gabriel', 'Simek (TA)', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/29679939?v=4', 'Casey', 'Cameron (TA)', '', 'https://github.com/CaseyCameron', 'Get off my lawn', '', '1', ''),
 
     ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', 'indianaholdsworth@gmail.com'),
 
@@ -115,7 +116,7 @@ VALUES
 
     ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '1', ''),
 
-    ('https://avatars.githubusercontent.com/u/29679939?v=4', 'Casey', 'Cameron', '', 'https://github.com/CaseyCameron', 'Get off my lawn', '', '1', '');
+     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
     
 
 
