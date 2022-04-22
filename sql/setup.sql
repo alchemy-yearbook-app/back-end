@@ -76,42 +76,63 @@ CREATE TABLE advice (
 );
 
 
-INSERT INTO github_users (username, github_user_id) VALUES ('mikemike', 1);
+INSERT INTO 
+    github_users (username, github_user_id) 
+VALUES 
+    ('gabrielsimek', 1),
+    ('CaseyCameron', 2),
+    ('h-indiana-holdsworth', 3),
+    ('kevindo1', 4),
+    ('markjvoltaire', 5),
+    ('mira-kine', 6),
+    ('phoenix-nicholson', 7),
+    ('ajoy267', 8),
+    ('BrettSeifried', 9),
+    ('gcrowder93', 10),
+    ('james-demiraiakian', 11),
+    ('karyssa-dandrea', 12),
+    ('michellerenehey', 13),
+    ('libbi-dunham', 14),
+    ('VioletKatrinStewart', 16),
+    ('zcaldwell', 17),
+    ('emmaegstad', 18),
+    ('mikemike', 19);
 
 INSERT INTO 
     profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
 VALUES 
-    ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', 'indianaholdsworth@gmail.com'),
+    ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '3', 'indianaholdsworth@gmail.com'),
 
-    ('https://avatars.githubusercontent.com/u/80404797?v=4', 'Kevin', 'Do', '', 'https://github.com/kevindo1', 'lets Git this bread', '', '1', ''),
 
-    ('https://avatars.githubusercontent.com/u/88409474?v=4', 'Mark', 'Voltaire', '', 'https://github.com/markjvoltaire', 'RAMPAGEEEE', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/80404797?v=4', 'Kevin', 'Do', '', 'https://github.com/kevindo1', 'lets Git this bread', '', '4', ''),
 
-    ('https://avatars.githubusercontent.com/u/90009901?v=4', 'Mira', 'Kinebuchi', '', 'https://github.com/mira-kine', 'i seen LOTS', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/88409474?v=4', 'Mark', 'Voltaire', '', 'https://github.com/markjvoltaire', 'RAMPAGEEEE', '', '5', ''),
 
-    ('https://avatars.githubusercontent.com/u/89114786?v=4', 'Phoenix', 'Nicholson', '', 'https://github.com/phoenix-nicholson', 'if the test is green the code is clean', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/90009901?v=4', 'Mira', 'Kinebuchi', '', 'https://github.com/mira-kine', 'i seen LOTS', '', '6', ''),
 
-    ('https://avatars.githubusercontent.com/u/70282366?v=4', 'Andrew', 'Joy', '', 'https://github.com/ajoy267', 'is it an error or do I not know what im doing?', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/89114786?v=4', 'Phoenix', 'Nicholson', '', 'https://github.com/phoenix-nicholson', 'if the test is green the code is clean', '', '7', ''),
 
-    ('https://avatars.githubusercontent.com/u/88357710?v=4', 'Brett', 'Seifried', '', 'https://github.com/BrettSeifried', 'I had 0 grey hair before starting Alchemy, look at me now', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/70282366?v=4', 'Andrew', 'Joy', '', 'https://github.com/ajoy267', 'is it an error or do I not know what im doing?', '', '8', ''),
 
-    ('https://avatars.githubusercontent.com/u/88062994?v=4', 'Chase', 'Crowder', '', 'https://github.com/gcrowder93', 'love you bye', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/88357710?v=4', 'Brett', 'Seifried', '', 'https://github.com/BrettSeifried', 'I had 0 grey hair before starting Alchemy, look at me now', '', '9', ''),
 
-    ('https://avatars.githubusercontent.com/u/89051411?v=4', 'James', 'Demiraiakian', '', 'https://github.com/james-demiraiakian', '/R\/E\G\\E/X\', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/88062994?v=4', 'Chase', 'Crowder', '', 'https://github.com/gcrowder93', 'love you bye', '', '10', ''),
 
-    ('https://avatars.githubusercontent.com/u/85650484?v=4', 'Karyssa', 'Dandrea', '', 'https://github.com/karyssa-dandrea', 'what would michelle do?', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/89051411?v=4', 'James', 'Demiraiakian', '', 'https://github.com/james-demiraiakian', '/R\/E\G\\E/X\', '', '11', ''),
 
-    ('https://avatars.githubusercontent.com/u/69729289?v=4', 'Michelle', 'Nygren', '', 'https://github.com/michellerenehey', 'what would emma do?', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/85650484?v=4', 'Karyssa', 'Dandrea', '', 'https://github.com/karyssa-dandrea', 'what would michelle do?', '', '12', ''),
 
-    ('https://avatars.githubusercontent.com/u/89104000?v=4', 'Libbi', 'Dunham', '', 'https://github.com/libbi-dunham', 'love you byeee and MISS GIRL', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/69729289?v=4', 'Michelle', 'Nygren', '', 'https://github.com/michellerenehey', 'what would emma do?', '', '13', ''),
 
-    ('https://avatars.githubusercontent.com/u/86867967?v=4', 'Spencer', 'Eagleton', '', 'https://github.com/spencer-eagleton', 'To live is to suffer', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/89104000?v=4', 'Libbi', 'Dunham', '', 'https://github.com/libbi-dunham', 'love you byeee and MISS GIRL', '', '14', ''),
 
-    ('https://avatars.githubusercontent.com/u/89110001?v=4', 'Violet', 'Stewart', '', 'https://github.com/VioletKatrinStewart', 'No matter where you go, everyones connected. - Lain Iwakura', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/86867967?v=4', 'Spencer', 'Eagleton', '', 'https://github.com/spencer-eagleton', 'To live is to suffer', '', '15', ''),
 
-    ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/89110001?v=4', 'Violet', 'Stewart', '', 'https://github.com/VioletKatrinStewart', 'No matter where you go, everyones connected. - Lain Iwakura', '', '16', ''),
+
+    ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '17', ''),
     
-    ('https://avatars.githubusercontent.com/u/72117040?v=4', 'Emma', 'Egstad', '', 'https://github.com/emmaegstad', 'what would karyssa do?', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/72117040?v=4', 'Emma', 'Egstad', '', 'https://github.com/emmaegstad', 'what would karyssa do?', '', '18', ''),
 
     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
 
