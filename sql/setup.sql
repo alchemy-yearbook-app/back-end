@@ -134,11 +134,11 @@ VALUES
     
     ('https://avatars.githubusercontent.com/u/72117040?v=4', 'Emma', 'Egstad', '', 'https://github.com/emmaegstad', 'what would karyssa do?', '', '18', ''),
 
-    ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
+    ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com'),
 
     ('https://im3.ezgif.com/tmp/ezgif-3-64f69efea3.gif', 'Gabriel', 'Simek (TA)', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
 
-    ('https://avatars.githubusercontent.com/u/29679939?v=4', 'Casey', 'Cameron (TA)', '', 'https://github.com/CaseyCameron', 'Get off my lawn', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/29679939?v=4', 'Casey', 'Cameron (TA)', '', 'https://github.com/CaseyCameron', 'Get off my lawn', '', '1', '');
     
 
 INSERT INTO cohort (github_team_id, name)
