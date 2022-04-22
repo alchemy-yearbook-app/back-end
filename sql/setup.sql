@@ -130,11 +130,11 @@ VALUES
     ('https://avatars.githubusercontent.com/u/89110001?v=4', 'Violet', 'Stewart', '', 'https://github.com/VioletKatrinStewart', 'No matter where you go, everyones connected. - Lain Iwakura', '', '1', ''),
 
     ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '1', ''),
-
-     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
     
+    ('https://avatars.githubusercontent.com/u/72117040?v=4', 'Emma', 'Egstad', '', 'https://github.com/emmaegstad', 'what would karyssa do?', '', '1', ''),
 
-
+    ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
+    
 
 INSERT INTO cohort (github_team_id, name)
 VALUES (5116318, 'september-2021');
@@ -149,3 +149,9 @@ VALUES
     ('5116318', '', '', '"How do you center a Div??" Thats impossible', '', '-Mark'),
     ('5116318', 'https://i.ibb.co/qWMbJF5/screen-shot-2022-01-21-at-12-01-13-pm.png', '', '', '', 'Foundations w/ Julie'),
     ('5116318', 'https://i.ibb.co/yqKbThd/image-from-ios.jpg', '', '','', 'In person meet up')
+
+INSERT INTO advice (title, advice, alumni_name, cohort)
+VALUES 
+    ('Navigating Imposter Syndrome', 'Navigating imposter syndrome can be VERY TOUGH...... if we let it. Mine came from holding on to the idea of what I thought a programmer was, like the things we see on TV, movies, etc. Then I had to realize that this is my journey, experience and my process. Once I realized that my process is mine and no one elses.... I embraced the journey', 'Mark Voltaire', 'September 2021'), 
+    ('Asking for help', 'Coming from a highly competitive pre-med and pharmacy field, it was rare for students to help each other. Students were gatekeeping information and keeping it for themselves. Some professors would shoot down questions saying it was a `stupid question`. However, this is completely different in Alchemy. Do not be afraid to ask for help from classmates, instructors, staff, and TAs. Everyone is empathetic and here to help you, it is always a safe learning environment.', 'Kevin Do', 'September 2021'), 
+    ('Superpower', 'There will be times where you might think, what am I doing here? I don`t belong, this is out of my comfort zone, I don`t know what I`m doing. But let me tell ya, if you have come this far, you already have a superpower. Remember that first decision you made to try something new, and know that that initial courage will take you the rest of the way!', 'Mira Kinebuchi', 'September 2021');
