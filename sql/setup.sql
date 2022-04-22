@@ -92,6 +92,12 @@ VALUES
     ('james-demiraiakian', 11);
     ('karyssa-dandrea', 12);
     ('michellerenehey', 13);
+    ('libbi-dunham', 14);
+    ('spencer-eagleton', 15);
+    ('VioletKatrinStewart', 16);
+    ('zcaldwell', 17);
+    ('emmaegstad', 18);
+    ('mikemike', 19);
 
 INSERT INTO 
     profile (avatar, first_name, last_name, linked_in, github, quote, company, user_id, email) 
@@ -121,19 +127,19 @@ VALUES
 
     ('https://avatars.githubusercontent.com/u/85650484?v=4', 'Karyssa', 'Dandrea', '', 'https://github.com/karyssa-dandrea', 'what would michelle do?', '', '12', ''),
 
-    ('https://avatars.githubusercontent.com/u/69729289?v=4', 'Michelle', 'Nygren', '', 'https://github.com/michellerenehey', 'what would emma do?', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/69729289?v=4', 'Michelle', 'Nygren', '', 'https://github.com/michellerenehey', 'what would emma do?', '', '13', ''),
 
-    ('https://avatars.githubusercontent.com/u/89104000?v=4', 'Libbi', 'Dunham', '', 'https://github.com/libbi-dunham', 'love you byeee and MISS GIRL', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/89104000?v=4', 'Libbi', 'Dunham', '', 'https://github.com/libbi-dunham', 'love you byeee and MISS GIRL', '', '14', ''),
 
-    ('https://avatars.githubusercontent.com/u/86867967?v=4', 'Spencer', 'Eagleton', '', 'https://github.com/spencer-eagleton', 'To live is to suffer', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/86867967?v=4', 'Spencer', 'Eagleton', '', 'https://github.com/spencer-eagleton', 'To live is to suffer', '', '15', ''),
 
-    ('https://avatars.githubusercontent.com/u/89110001?v=4', 'Violet', 'Stewart', '', 'https://github.com/VioletKatrinStewart', 'No matter where you go, everyones connected. - Lain Iwakura', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/89110001?v=4', 'Violet', 'Stewart', '', 'https://github.com/VioletKatrinStewart', 'No matter where you go, everyones connected. - Lain Iwakura', '', '16', ''),
 
-    ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '17', ''),
     
-    ('https://avatars.githubusercontent.com/u/72117040?v=4', 'Emma', 'Egstad', '', 'https://github.com/emmaegstad', 'what would karyssa do?', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/72117040?v=4', 'Emma', 'Egstad', '', 'https://github.com/emmaegstad', 'what would karyssa do?', '', '18', ''),
 
-    ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com');
+    ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '19', 'kevind0501@gmail.com');
     
 
 INSERT INTO cohort (github_team_id, name)
