@@ -4,6 +4,7 @@ const request = require('supertest');
 const app = require('../lib/app');
 const Profile = require('../lib/models/Profile');
 const { getProfileById } = require('../lib/models/Profile');
+const YourCohort = require('../lib/models/YourCohort');
 
 jest.mock('../lib/utils/github');
 
@@ -119,6 +120,15 @@ describe('yearbook app routes', () => {
     };
 
     expect(res.body).toEqual({ id: expect.any(String), ...expected });
+  });
+
+  it('counts profiles in a cohort', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/login/callback?code=42').redirects(1);
+    await agent.get('/login/callback');
+
+    const res = await YourCohort.getYourCohort();
+    console.log('res', res);
   });
 
   it('deletes a profile', async () => {
