@@ -83,7 +83,39 @@ INSERT INTO
 VALUES 
     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com'),
 
-    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', '', '1', '');
+    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Kevin', 'Do', '', 'https://github.com/kevindo1', 'lets Git this bread', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/88409474?v=4', 'Mark', 'Voltaire', '', 'https://github.com/markjvoltaire', '', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/90009901?v=4', 'Mira', 'Kinebuchi', '', 'https://github.com/mira-kine', 'i seen LOTS', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/89114786?v=4', 'Phoenix', 'Nicholson', '', 'https://github.com/phoenix-nicholson', 'if the test is green the code is clean', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/70282366?v=4', 'Andrew', 'Joy', '', 'https://github.com/ajoy267', 'is it an error or do I not know what im doing?', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/88357710?v=4', 'Brett', 'Seifried', '', 'https://github.com/BrettSeifried', 'I had 0 grey hair before starting Alchemy, look at me now', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/88062994?v=4', 'Chase', 'Crowder', '', 'https://github.com/gcrowder93', 'love you bye', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/89051411?v=4', 'James', 'Demiraiakian', '', 'https://github.com/james-demiraiakian', '/R\/E\G\\E/X\', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/85650484?v=4', 'Karyssa', 'Dandrea', '', 'https://github.com/karyssa-dandrea', 'what would michelle do?', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/69729289?v=4', 'Michelle', 'Nygren', '', 'https://github.com/michellerenehey', 'what would emma do?', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/89104000?v=4', 'Libbi', 'Dunham', '', 'https://github.com/libbi-dunham', 'love you byeee and MISS GIRL', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/86867967?v=4', 'Spencer', 'Eagleton', '', 'https://github.com/spencer-eagleton', 'To live is to suffer', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/89110001?v=4', 'Violet', 'Stewart', '', 'https://github.com/VioletKatrinStewart', 'No matter where you go, everyones connected. - Lain Iwakura', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/85139250?v=4', 'Zachary', 'Caldwell', '', 'https://github.com/zcaldwell', 'Pobodys Nerfect.', '', '1', ''),
+
+    ('https://avatars.githubusercontent.com/u/29679939?v=4', 'Casey', 'Cameron', '', 'https://github.com/CaseyCameron', 'Get off my lawn', '', '1', '');
     
 
 
