@@ -83,7 +83,7 @@ INSERT INTO
 VALUES 
     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com'),
 
-    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
+    ('https://im3.ezgif.com/tmp/ezgif-3-64f69efea3.gif', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
 
     ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', 'indianaholdsworth@gmail.com'),
 
@@ -127,7 +127,7 @@ INSERT INTO memorybook (cohort_id, image_url, audio, text, resource_url, name)
 VALUES 
     ('5116318', 'https://i.ibb.co/qB7Pw9w/IMG-9759.jpg', '', 'when employee directory', '', 'Titanium'),
     ('5116318', '', '', 'You (Phoenix) and Kevin can`t even spend one day apart from each other???', '', '-Libbi'),
-    ('5116318', 'https://i.ibb.co/vQ5pf8H/IMG-9771-2.jpg', '', 'When Git Revert', '', 'Titanium'),
+    ('5116318', 'https://i.ibb.co/vQ5pf8H/IMG-9771-2.jpg', '', 'When Git revert takes you too far back', '', 'Titanium'),
     ('5116318', 'https://emoji.slack-edge.com/T6FCZF1HR/potato-head/6c637bbe90391dfd.png', '', 'Dan`s potato', '', '-Dan'),
     ('5116318', '', '', 'booger', '', '-Julie'),
     ('5116318', '', '', '"How do you center a Div??" Thats impossible', '', '-Mark'),
