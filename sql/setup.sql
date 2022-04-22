@@ -124,4 +124,12 @@ INSERT INTO cohort (github_team_id, name)
 VALUES (5116318, 'september-2021');
 
 INSERT INTO memorybook (cohort_id, image_url, audio, text, resource_url, name)
-VALUES ('5116318', 'https://i.ibb.co/qB7Pw9w/IMG-9759.jpg', '', 'test', '', 'kevin');
+VALUES 
+    ('5116318', 'https://i.ibb.co/qB7Pw9w/IMG-9759.jpg', '', 'when employee directory', '', 'Titanium'),
+    ('5116318', '', '', 'You (Phoenix) and Kevin can`t even spend one day apart from each other???', '', '-Libbi'),
+    ('5116318', 'https://i.ibb.co/vQ5pf8H/IMG-9771-2.jpg', '', 'When Git Revert', '', 'Titanium'),
+    ('5116318', 'https://emoji.slack-edge.com/T6FCZF1HR/potato-head/6c637bbe90391dfd.png', '', 'Dan`s potato', '', '-Dan'),
+    ('5116318', '', '', 'booger', '', '-Julie'),
+    ('5116318', '', '', '"How do you center a Div??" Thats impossible', '', '-Mark'),
+    ('5116318', 'https://i.ibb.co/qWMbJF5/screen-shot-2022-01-21-at-12-01-13-pm.png', '', '', '', 'Foundations w/ Julie'),
+    ('5116318', 'https://i.ibb.co/yqKbThd/image-from-ios.jpg', '', '','', 'In person meet up')
