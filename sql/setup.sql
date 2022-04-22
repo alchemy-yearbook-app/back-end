@@ -79,24 +79,23 @@ CREATE TABLE advice (
 INSERT INTO 
     github_users (username, github_user_id) 
 VALUES 
-    ('gabrielsimek', 1);
-    ('CaseyCameron', 2);
-    ('h-indiana-holdsworth', 3);
-    ('kevindo1', 4);
-    ('markjvoltaire', 5);
-    ('mira-kine', 6);
-    ('phoenix-nicholson', 7);
-    ('ajoy267', 8);
-    ('BrettSeifried', 9);
-    ('gcrowder93', 10);
-    ('james-demiraiakian', 11);
-    ('karyssa-dandrea', 12);
-    ('michellerenehey', 13);
-    ('libbi-dunham', 14);
-    ('spencer-eagleton', 15);
-    ('VioletKatrinStewart', 16);
-    ('zcaldwell', 17);
-    ('emmaegstad', 18);
+    ('gabrielsimek', 1),
+    ('CaseyCameron', 2),
+    ('h-indiana-holdsworth', 3),
+    ('kevindo1', 4),
+    ('markjvoltaire', 5),
+    ('mira-kine', 6),
+    ('phoenix-nicholson', 7),
+    ('ajoy267', 8),
+    ('BrettSeifried', 9),
+    ('gcrowder93', 10),
+    ('james-demiraiakian', 11),
+    ('karyssa-dandrea', 12),
+    ('michellerenehey', 13),
+    ('libbi-dunham', 14),
+    ('VioletKatrinStewart', 16),
+    ('zcaldwell', 17),
+    ('emmaegstad', 18),
     ('mikemike', 19);
 
 INSERT INTO 
