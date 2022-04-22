@@ -83,7 +83,7 @@ INSERT INTO
 VALUES 
     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com'),
 
-    ('https://im3.ezgif.com/tmp/ezgif-3-64f69efea3.gif', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
+    ('https://im3.ezgif.com/tmp/ezgif-3-64f69efea3.gif', 'Gabriel', 'Simek (TA)', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
 
     ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', 'indianaholdsworth@gmail.com'),
 
