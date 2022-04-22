@@ -90,7 +90,7 @@ VALUES
 
     ('https://avatars.githubusercontent.com/u/80404797?v=4', 'Kevin', 'Do', '', 'https://github.com/kevindo1', 'lets Git this bread', '', '1', ''),
 
-    ('https://avatars.githubusercontent.com/u/88409474?v=4', 'Mark', 'Voltaire', '', 'https://github.com/markjvoltaire', '', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/88409474?v=4', 'Mark', 'Voltaire', '', 'https://github.com/markjvoltaire', 'RAMPAGEEEE', '', '1', ''),
 
     ('https://avatars.githubusercontent.com/u/90009901?v=4', 'Mira', 'Kinebuchi', '', 'https://github.com/mira-kine', 'i seen LOTS', '', '1', ''),
 
