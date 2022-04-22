@@ -83,11 +83,11 @@ INSERT INTO
 VALUES 
     ('https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/panthers/cxdylbkzafoaeort5joe', 'mikemike', 'jordan', 'https://www.linkedin.com/in/kdo/', 'https://github.com/kevindo1', 'i love pizza', 'piped piper', '1', 'kevind0501@gmail.com'),
 
-    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Gabriel', 'Simek', 'https://www.linkedin.com/in/gabrielsimek/', 'https://github.com/gabrielsimek', 'for sureeeee', 'CareRev', '1', ''),
 
-    ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/88062154?v=4', 'Indy', 'Holdsworth', 'https://www.linkedin.com/in/h-indiana-holdsworth/', 'https://github.com/H-Indiana-Holdsworth', 'Indy out yo', '', '1', 'indianaholdsworth@gmail.com'),
 
-    ('https://avatars.githubusercontent.com/u/71483160?v=4', 'Kevin', 'Do', '', 'https://github.com/kevindo1', 'lets Git this bread', '', '1', ''),
+    ('https://avatars.githubusercontent.com/u/80404797?v=4', 'Kevin', 'Do', '', 'https://github.com/kevindo1', 'lets Git this bread', '', '1', ''),
 
     ('https://avatars.githubusercontent.com/u/88409474?v=4', 'Mark', 'Voltaire', '', 'https://github.com/markjvoltaire', '', '', '1', ''),
 
