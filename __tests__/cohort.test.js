@@ -25,7 +25,7 @@ describe('cohort routes', () => {
       uuid: '2',
       username: null,
       githubUserId: null,
-      teamToken: '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',
+      teamToken: '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',
       iat: expect.any(Number),
       exp: expect.any(Number),
     });
