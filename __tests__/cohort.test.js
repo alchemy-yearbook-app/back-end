@@ -21,7 +21,6 @@ describe('cohort routes', () => {
 
     const res = await agent.get('/api/v1/github/me');
 
-    console.log('res.body', res.body);
     expect(res.body).toEqual({
       uuid: '2',
       username: null,
