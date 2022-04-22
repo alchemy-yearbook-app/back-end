@@ -153,7 +153,7 @@ VALUES
     ('5116318', '', '', 'booger', '', '-Julie'),
     ('5116318', '', '', '"How do you center a Div??" Thats impossible', '', '-Mark'),
     ('5116318', 'https://i.ibb.co/qWMbJF5/screen-shot-2022-01-21-at-12-01-13-pm.png', '', '', '', 'Foundations w/ Julie'),
-    ('5116318', 'https://i.ibb.co/yqKbThd/image-from-ios.jpg', '', '','', 'In person meet up')
+    ('5116318', 'https://i.ibb.co/yqKbThd/image-from-ios.jpg', '', '','', 'In person meet up');
 
 INSERT INTO advice (title, advice, alumni_name, cohort)
 VALUES 
