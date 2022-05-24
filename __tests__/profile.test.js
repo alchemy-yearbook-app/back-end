@@ -84,7 +84,7 @@ describe('yearbook app routes', () => {
 
     const profile = await Profile.createProfile({
       avatar: 'Blue Person',
-      firstName: 'Bing Bong',
+      first_name: 'Bing Bong',
       lastName: 'Ding Dong',
       linkedIn: 'yeetin',
       github: 'gitin',
